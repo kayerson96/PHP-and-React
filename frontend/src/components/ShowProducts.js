@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import Like from './Like';
 
 const endpoint = 'http://localhost:8000/api'
 
@@ -51,8 +52,14 @@ const ShowProducts = () => {
                 )) }
             </tbody>
         </table>
+        <main className='d-flex align-items-center justify-content-center'>
+  <Like/>   
+  </main>
     </div>
-  )
+    
+  );
+
+  
 }
 
 export default ShowProducts
